@@ -1,15 +1,9 @@
 const menuBtn = document.querySelector(".menu-btn");
-const nav = document.querySelector("nav");
+const navUl = document.querySelector("nav ul");
 
 menuBtn.addEventListener("click", () => {
-
-    if(nav.style.display === "block"){
-        nav.style.display = "none";
-    }else{
-        nav.style.display = "block";
-    }
-
-});
+    navUl.classList.toggle("active");
+    });
 
 const form = document.querySelector("form");
 
