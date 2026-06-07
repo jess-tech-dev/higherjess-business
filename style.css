@@ -1,9 +1,5 @@
-i/* =========================
-   GLOBAL STYLES
-========================= */
-
 *{
-    margin:0
+    margin:0;
     padding:0;
     box-sizing:border-box;
 }
@@ -56,324 +52,63 @@ header .container{
     align-items:center;
     padding:18px 0;
 }
+
+/* LOGO */
 .logo img{
-        width: 60px;
-            height: auto;
-            }
-}
-.logo h2{
-    color:#0056d2;
-    font-weight:700;
+    width:60px;
+    height:auto;
 }
 
-nav ul{
-        display:flex;
-            list-style:none;
-                gap:20px;
-                }
-
-                .menu-btn{
-                    display:none;
-                    }
-
-                    /* MOBILE */
-                    @media(max-width:768px){
-
-                        nav{
-                                display:block;
-                                    }
-
-                                        nav ul{
-                                                display:none;
-                                                        flex-direction:column;
-                                                                background:white;
-                                                                        position:absolute;
-                                                                                top:70px;
-                                                                                        right:20px;
-                                                                                                padding:15px;
-                                                                                                        box-shadow:0 5px 20px rgba(0,0,0,.1);
-                                                                                                                border-radius:10px;
-                                                                                                                    }
-
-                                                                                                                        nav ul.active{
-                                                                                                                                display:flex;
-                                                                                                                                    }
-
-                                                                                                                                        .menu-btn{
-                                                                                                                                                display:block;
-                                                                                                                                                        font-size:25px;
-                                                                                                                                                                background:none;
-                                                                                                                                                                        border:none;
-                                                                                                                                                                            }
-                                                                                                                                                                            }
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-
+/* HERO */
 .hero{
     min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    background:
-    linear-gradient(
-        rgba(0,86,210,.8),
-        rgba(0,86,210,.8)
-    ),
-    url("../images/hero.jpg");
-
-    background-size:cover;
-    background-position:center;
     color:white;
-}
-
-.hero-content{
-    max-width:800px;
-}
-
-.hero h1{
-    font-size:3.5rem;
-    margin-bottom:20px;
-}
-
-.hero p{
-    color:#fff;
-    font-size:1.2rem;
-    margin-bottom:30px;
-}
-
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn,
-.btn-secondary{
-    padding:14px 28px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn{
-    background:#fff;
-    color:#0056d2;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.btn-secondary{
-    border:2px solid #fff;
-    color:#fff;
-}
-
-.btn-secondary:hover{
-    background:#fff;
-    color:#0056d2;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    background:white;
-}
-
-.about h2{
-    text-align:center;
-    color:#0056d2;
-}
-
-.about p{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-}
-
-.mission-vision{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-    margin-top:50px;
-}
-
-.card{
-    background:#fff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-/* =========================
-   SERVICES
-========================= */
-
-.services{
-    background:#f5f7fb;
-}
-
-.services h2{
-    text-align:center;
-    color:#0056d2;
-}
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    margin-top:50px;
-}
-
-.service-card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-8px);
-}
-
-.service-card h3{
-    color:#0056d2;
-}
-
-/* =========================
-   WHY US
-========================= */
-
-.why-us{
-    background:white;
-}
-
-.why-us h2{
-    text-align:center;
-    color:#0056d2;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:50px;
-}
-
-.feature{
-    background:#f8f9fc;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    background:#f5f7fb;
-}
-
-.contact h2{
-    text-align:center;
-    color:#0056d2;
-    margin-bottom:30px;
-}
-
-form{
-    max-width:700px;
-    margin:auto;
-}
-
-form input,
-form textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    outline:none;
-}
-
-form button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:10px;
     background:#0056d2;
-    color:white;
-    font-size:1rem;
-    cursor:pointer;
-    transition:.3s;
 }
 
-form button:hover{
-    background:#003f99;
+/* NAV */
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
 }
 
-.contact-info{
-    text-align:center;
-    margin-top:40px;
+nav a{
+    text-decoration:none;
+    color:#333;
 }
 
-.contact-info p{
-    margin:10px 0;
+.menu-btn{
+    display:none;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-
-footer p{
-    color:white;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
+/* MOBILE */
 @media(max-width:768px){
 
-    nav{
+    nav ul{
         display:none;
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:white;
+        flex-direction:column;
+        padding:15px;
+        border-radius:10px;
+        box-shadow:0 5px 20px rgba(0,0,0,.1);
+    }
+
+    nav ul.active{
+        display:flex;
     }
 
     .menu-btn{
         display:block;
-    }
-
-    .hero h1{
-        font-size:2.3rem;
-    }
-
-    .hero p{
-        font-size:1rem;
-    }
-
-    section{
-        padding:60px 0;
+        font-size:28px;
+        background:none;
+        border:none;
     }
 }
