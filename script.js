@@ -1,6 +1,8 @@
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', () => {
+    const contactBtn = document.getElementById('contactBtn');
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    contactBtn.addEventListener('click', () => {
+        alert('Thank you for reaching out to Higherjess Business! This button works.');
+    });
 });
