@@ -29,6 +29,126 @@ body.dark-theme {
     --border-color: #444444;
     --header-bg: #1a1a1a;
 }
+/* Add/Replace these styles in your style.css */
+
+/* Typography Overrides for Magazine Feel */
+h1, h2, h3 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-weight: 700;
+}
+
+/* Thin Editorial Borders */
+.magazine-divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section (Asymmetric layout) */
+.magazine-hero {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    flex: 1 1 55%;
+}
+
+.magazine-large-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover; /* Keeps image sharp and perfectly framed */
+    filter: grayscale(10%); /* Subtle editorial look */
+    transition: filter 0.5s ease;
+}
+
+.magazine-large-img:hover {
+    filter: grayscale(0%);
+}
+
+.hero-content {
+    flex: 1 1 35%;
+}
+
+/* Editorial Tags & Accents */
+.magazine-tag, .card-tag {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-color); /* Your beautiful Orange */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.magazine-title {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.magazine-excerpt {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+body.dark-theme .magazine-excerpt {
+    color: #b0b0b0;
+}
+
+.magazine-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+.magazine-link:hover {
+    color: var(--accent-color);
+}
+
+/* Section Header */
+.magazine-section-title {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+/* Editorial Grid */
+.editorial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.editorial-card {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 280px;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.editorial-card h3 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
 
 /* Global Styles */
 * {
