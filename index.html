@@ -4,80 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Higherjess Business</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Higherjess Business Logo" class="logo">
-        </div>
+        <div class="logo">Higherjess</div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact</a>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Elevate Your Vision With <span class="highlight">Higherjess Business</span></h1>
-            <p>Professional solutions tailored to drive your success forward.</p>
-            <a href="#contact" class="btn-primary">Get Started</a>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to Higherjess. We are dedicated to delivering top-tier solutions, professional web experiences, and specialized education. Our mission is to bridge gaps and empower businesses and individuals alike to reach their highest potential.</p>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <img src="service1.jpg" alt="Service One" class="service-img">
-                <h3>Consulting</h3>
-                <p>Strategic planning to help your business grow efficiently.</p>
-            </div>
-            <div class="service-card">
-                <img src="service2.jpg" alt="Service Two" class="service-img">
-                <h3>Development</h3>
-                <p>Building modern digital experiences tailored to your needs.</p>
-<section id="about">
-  <h2>À propos de Higherjess</h2>
-  <p>
-    Higherjess Business est une entreprise digitale spécialisée dans le développement web,
-    l’éducation et l’accompagnement entrepreneurial.
-  </p>
-
-  <p>
-    Notre mission est de transformer les idées en solutions numériques concrètes et accessibles,
-    en combinant technologie, formation et innovation.
-  </p>
-</section>
+    <section id="socials" class="section bg-light">
+        <div class="container text-center">
+            <h2>Connect With Us</h2>
+            <div class="social-icons">
+                <a href="https://github.com/jess-tech-dev" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Connect With Us</h2>
-        <p>Ready to start your project? Reach out through any of our channels below.</p>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <strong>📧 Email:</strong> 
-                <a href="mailto:contact@higherjess.com">contact@higherjess.com</a>
-            </div>
-            <div class="contact-item">
-                <strong>📞 Phone:</strong> 
-                <a href="tel:+243817817177">+243 817 817 177</a>
-            </div>
-            <div class="contact-item">
-                <strong>💬 WhatsApp:</strong> 
-                <a href="https://wa.me/18738916683" target="_blank" class="whatsapp-link">Chat on WhatsApp</a>
-            </div>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Email Us</h2>
+            <form action="https://formspree.io/f/your-formspree-id" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="_replyto" required placeholder="yourname@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                </div>
+                <input type="hidden" name="_next" value="https://www.higherjess.com">
+                <button type="submit" class="btn">Send Message</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Higherjess Business. All rights reserved.</p>
+        <p>&copy; 2026 Higherjess. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
