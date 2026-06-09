@@ -1,52 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
+const themeToggleBtn = document.getElementById('theme-toggle');
+const icon = themeToggleBtn.querySelector('i');
 
-  // ===== DARK MODE =====
-  const toggle = document.createElement("button");
-  toggle.innerHTML = "🌙";
-  toggle.style.position = "fixed";
-  toggle.style.top = "20px";
-  toggle.style.right = "20px";
-  toggle.style.zIndex = "999";
+// Check localStorage for preferred theme on load
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    icon.classList.replace('fa-moon', 'fa-sun');
+}
 
-  document.body.appendChild(toggle);
-
-  function setTheme(mode) {
-    document.documentElement.setAttribute("data-theme", mode);
-    localStorage.setItem("theme", mode);
-  }
-
-  const savedTheme = localStorage.getItem("theme") || "dark";
-  setTheme(savedTheme);
-
-  toggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
-    const newTheme = current === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    toggle.innerHTML = newTheme === "dark" ? "🌙" : "☀️";
-  });
-
-  // ===== WHATSAPP FIX =====
-  const wa = document.createElement("a");
-  wa.href = "https://wa.me/2437817177";
-  wa.target = "_blank";
-  wa.innerHTML = "💬";
-
-  Object.assign(wa.style, {
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    background: "#25D366",
-    color: "white",
-    width: "55px",
-    height: "55px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: "50%",
-    fontSize: "24px",
-    zIndex: "999"
-  });
-
-  document.body.appendChild(wa);
-
+// Toggle logic
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    
+    let theme = 'light';
+    if (document.body.classList.contains('dark-theme')) {
+        theme = 'dark';
+        icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+    }
+    
+    // Remember preference
+    localStorage.setItem('theme', theme);
 });
