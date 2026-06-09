@@ -40,3 +40,37 @@ toggle.addEventListener("click", () => {
   setTheme(newTheme);
   toggle.innerHTML = newTheme === "dark" ? "🌙" : "☀️";
 });
+const socials = [
+  { icon: "fab fa-facebook", link: "https://facebook.com" },
+  { icon: "fab fa-linkedin", link: "https://linkedin.com" },
+  { icon: "fab fa-github", link: "https://github.com" },
+  { icon: "fab fa-youtube", link: "https://youtube.com" },
+  { icon: "fab fa-whatsapp", link: "https://wa.me/2437817177" }
+];
+
+const container = document.createElement("div");
+container.style.position = "fixed";
+container.style.bottom = "20px";
+container.style.left = "20px";
+container.style.display = "flex";
+container.style.flexDirection = "column";
+container.style.gap = "10px";
+container.style.zIndex = "999";
+
+socials.forEach(s => {
+  const a = document.createElement("a");
+  a.href = s.link;
+  a.target = "_blank";
+  a.innerHTML = `<i class="${s.icon}"></i>`;
+  a.style.background = "#1f1f1f";
+  a.style.color = "#fff";
+  a.style.padding = "12px";
+  a.style.borderRadius = "50%";
+  a.style.textAlign = "center";
+  a.style.fontSize = "18px";
+  a.style.textDecoration = "none";
+
+  container.appendChild(a);
+});
+
+document.body.appendChild(container);
