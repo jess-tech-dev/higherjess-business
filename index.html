@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Higherjess Business</title>
+    <!-- FontAwesome for Social Media, WhatsApp, & Theme Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Header & Navigation -->
     <header>
+        <!-- Logo Text / Image area -->
         <div class="logo">Higherjess</div>
         <nav>
             <a href="#about">About</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
             <button id="theme-toggle" aria-label="Toggle dark mode">
                 <i class="fas fa-moon"></i>
@@ -20,6 +24,7 @@
         </nav>
     </header>
 
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h2>About Us</h2>
@@ -27,7 +32,32 @@
         </div>
     </section>
 
-    <section id="socials" class="section bg-light">
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code service-icon"></i>
+                    <h3>Web Development</h3>
+                    <p>Building high-performance, responsive websites and modern web applications tailored specifically to your business goals.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-language service-icon"></i>
+                    <h3>Language Training</h3>
+                    <p>Comprehensive language courses designed to break communication barriers and expand global opportunities.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-lightbulb service-icon"></i>
+                    <h3>Business Consulting</h3>
+                    <p>Providing strategic solutions and professional advice to help your enterprise scale efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="socials" class="section">
         <div class="container text-center">
             <h2>Connect With Us</h2>
             <div class="social-icons">
@@ -38,7 +68,8 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Contact Form Section -->
+    <section id="contact" class="section bg-light">
         <div class="container">
             <h2>Email Us</h2>
             <form action="https://formspree.io/f/your-formspree-id" method="POST" id="contact-form">
@@ -63,6 +94,12 @@
     <footer>
         <p>&copy; 2026 Higherjess. All rights reserved.</p>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <!-- Replace 1234567890 with your actual phone number containing country code (e.g., 243...) -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
