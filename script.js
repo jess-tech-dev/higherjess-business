@@ -1,21 +1,34 @@
 /**
  * Higherjess Business - Core Script File
- * Handles responsive interactions & theme persistence.
+ * Handles mobile navigation drawer, interactive triggers, & global dark mode persistence.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. MOBILE DRAWER NAVIGATION MENU ---
+    // ==========================================================================
+    // 1. MOBILE INTERACTIVE NAVIGATION DRAWER
+    // ==========================================================================
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', (e) => {
+            // Stops propagation to prevent immediate layout conflicts
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Optional: Closes the drawer automatically if clicking anywhere outside the menu layout
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
         });
     }
 
-    // --- 2. THEME CONTROLLER (DARK / LIGHT MODE) ---
+    // ==========================================================================
+    // 2. THEME ENGINE CONFIGURATION (DARK / LIGHT MODE)
+    // ==========================================================================
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
@@ -23,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
     const mobileThemeToggleIcon = document.getElementById('mobile-theme-toggle-icon');
 
+    /**
+     * Toggles the theme class on the document root and commits to local storage.
+     */
     function toggleMode() {
         document.documentElement.classList.toggle('dark');
         const isDark = document.documentElement.classList.contains('dark');
@@ -30,19 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
         updateIcons(isDark);
     }
 
+    /**
+     * Synchronizes icon visual indicators based on active client state.
+     * @param {Boolean} isDark 
+     */
     function updateIcons(isDark) {
+        // Desktop Navbar Interface Sync
         if (isDark) {
             if (themeToggleLightIcon) themeToggleLightIcon.classList.remove('hidden');
             if (themeToggleDarkIcon) themeToggleDarkIcon.classList.add('hidden');
-            if (mobileThemeToggleIcon) mobileThemeToggleIcon.className = "fa-solid fa-sun text-lg text-yellow-400";
+            if (mobileThemeToggleIcon) {
+                mobileThemeToggleIcon.className = "fa-solid fa-sun text-lg text-amber-500";
+            }
         } else {
             if (themeToggleDarkIcon) themeToggleDarkIcon.classList.remove('hidden');
             if (themeToggleLightIcon) themeToggleLightIcon.classList.add('hidden');
-            if (mobileThemeToggleIcon) mobileThemeToggleIcon.className = "fa-solid fa-moon text-lg";
+            if (mobileThemeToggleIcon) {
+                mobileThemeToggleIcon.className = "fa-solid fa-moon text-lg text-gray-500";
+            }
         }
     }
 
-    // Check configuration on initial launch
+    // --- INITIAL BUILD THEME CHECK ---
+    // Reads explicitly stored user setting or matches system preferences fallback
     if (localStorage.getItem('color-theme') === 'dark' || 
         (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
@@ -52,65 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateIcons(false);
     }
 
-    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleMode);
-    if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleMode);
-});
-/**
- * Higherjess Business - Core Script File
- * Handles responsive interactions, mobile navigation, & theme persistence.
- */
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- 1. MOBILE DRAWER NAVIGATION MENU ---
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
-
-    // --- 2. THEME CONTROLLER (DARK / LIGHT MODE) ---
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-    
-    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
-    const mobileThemeToggleIcon = document.getElementById('mobile-theme-toggle-icon');
-
-    function toggleMode() {
-        document.documentElement.classList.toggle('dark');
-        const isDark = document.documentElement.classList.contains('dark');
-        localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
-        updateIcons(isDark);
-    }
-
-    function updateIcons(isDark) {
-        // Desktop Icons
-        if (isDark) {
-            if (themeToggleLightIcon) themeToggleLightIcon.classList.remove('hidden');
-            if (themeToggleDarkIcon) themeToggleDarkIcon.classList.add('hidden');
-            if (mobileThemeToggleIcon) mobileThemeToggleIcon.className = "fa-solid fa-sun text-lg text-amber-500";
-        } else {
-            if (themeToggleDarkIcon) themeToggleDarkIcon.classList.remove('hidden');
-            if (themeToggleLightIcon) themeToggleLightIcon.classList.add('hidden');
-            if (mobileThemeToggleIcon) mobileThemeToggleIcon.className = "fa-solid fa-moon text-lg";
-        }
-    }
-
-    // Check configuration on initial launch
-    if (localStorage.getItem('color-theme') === 'dark' || 
-        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-        updateIcons(true);
-    } else {
-        document.documentElement.classList.remove('dark');
-        updateIcons(false);
-    }
-
-    // Attach click events
+    // --- EVENT BINDINGS ---
     if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleMode);
     if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleMode);
 });
