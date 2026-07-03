@@ -82,3 +82,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleMode);
     if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleMode);
 });
+
+// ==========================================================================
+// 1. MOBILE INTERACTIVE NAVIGATION DRAWER
+// ==========================================================================
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Toggle the visibility class cleanly
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Closes the drawer automatically if clicking anywhere outside the active layout
+    document.addEventListener('click', (e) => {
+        const isMenuOpen = !mobileMenu.classList.contains('hidden');
+        const clickedOutside = !mobileMenu.contains(e.target) && !menuBtn.contains(e.target);
+        
+        if (isMenuOpen && clickedOutside) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+}
