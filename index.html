@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higherjess Business | Build. Learn. Grow.</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Higherjess Business | Digital Solutions</title>
+    <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Style Sheet Sheet Link -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- TAILWIND ENGINE CRITICAL DIRECTION -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -14,221 +20,78 @@
                     colors: {
                         brand: {
                             orange: '#FF6B00',
-                            navy: '#0A192F',
-                            slate: '#64748B',
+                            navy: '#0A192F'
                         }
                     }
                 }
             }
         }
     </script>
-    <!-- FontAwesome Core Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-[#0A1120] dark:text-gray-100 font-sans transition-colors duration-300">
+<body class="bg-gray-50 text-gray-900 dark:bg-[#0A1120] dark:text-gray-100 min-h-screen">
 
-    <!-- NAVIGATION BAR -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0A1120]/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <!-- GLOBAL NAVBAR -->
+    <nav class="sticky top-0 bg-white/80 dark:bg-[#0C1527]/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800/80 w-full z-[100]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo & Brand identity -->
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="logo.png" alt="Higherjess Business Logo" class="h-10 w-10 rounded-lg object-cover border border-gray-200 dark:border-gray-700 transition-transform group-hover:scale-105">
-                    <div>
-                        <span class="font-bold text-lg tracking-tight block text-brand-navy dark:text-white">Higherjess Business</span>
-                        <span class="text-xs text-brand-orange font-medium tracking-wider uppercase block -mt-1">Build. Learn. Grow.</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation Links -->
-                <div class="hidden md:flex items-center gap-6">
-                    <a href="index.html" class="text-brand-orange font-semibold transition-colors">Home</a>
-                    <a href="#about" class="hover:text-brand-orange font-medium transition-colors">About</a>
-                    <a href="https://prix.higherjess.com" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Pricing FR <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
-                    <a href="https://academia.higherjess.com" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Academia <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
-                    <a href="https://magazine.higherjess.com" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Magazine <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
-                    <a href="https://higherjess.store" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Shop <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
-                    <a href="https://portfolio.higherjess.com" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Portfolio <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
-                </div>
-
-                <!-- Dark Mode Toggle Button & Contact Action -->
-                <div class="hidden md:flex items-center gap-4">
-                    <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none">
-                        <i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun text-lg text-amber-500"></i>
-                        <i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon text-lg"></i>
-                    </button>
-                    <a href="pages/contact.html" class="bg-brand-orange hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg transition-all shadow-sm shadow-orange-500/10 hover:shadow-orange-500/20">
-                        Contact Us
+                
+                <!-- Brand Logo Identity -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-black uppercase tracking-tight text-brand-navy dark:text-white">
+                        Higherjess<span class="text-brand-orange">.</span>
                     </a>
                 </div>
 
-                <!-- Mobile Menu & Theme Icon Triggers -->
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-brand-orange font-semibold">Home</a>
+                    <a href="pages/services.html" class="hover:text-brand-orange font-medium transition-colors">Services</a>
+                    <!-- Price/Anchor links point directly to specific ID sections on home page layout -->
+                    <a href="#services-preview" class="hover:text-brand-orange font-medium transition-colors">Prices</a>
+                    
+                    <!-- Desktop Theme Mode Engine Switch Trigger -->
+                    <button id="theme-toggle" type="button" aria-label="Toggle dark mode desktop" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none">
+                        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-lg"></i>
+                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-lg text-amber-500 hidden"></i>
+                    </button>
+
+                    <a href="pages/contact.html" class="bg-brand-orange hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg transition-all shadow-sm">Contact Us</a>
+                </div>
+
+                <!-- Mobile Header Interactive Action Controls -->
                 <div class="flex items-center gap-2 md:hidden">
+                    <!-- Mobile Theme Engine Switch Trigger -->
                     <button id="mobile-theme-toggle" type="button" aria-label="Toggle dark mode mobile" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none">
                         <i id="mobile-theme-toggle-icon" class="fa-solid fa-moon text-lg"></i>
                     </button>
-                    <button id="menu-btn" type="button" aria-label="Toggle navigation menu" class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none">
-                        <i class="fa-solid fa-bars text-xl"></i>
+                    <!-- Core Hamburger Drawer Layout Button Trigger -->
+                    <button id="menu-btn" type="button" aria-label="Toggle navigation menu" class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none relative z-[110]">
+                        <i class="fa-solid fa-bars text-xl pointer-events-none"></i>
                     </button>
                 </div>
+
             </div>
         </div>
 
-        <!-- Mobile Navigation Menu Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#0C1527] border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
-            <div class="px-4 pt-2 pb-4 space-y-1">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-brand-orange font-semibold">Home</a>
-                <a href="#about" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">About</a>
-                <a href="https://prix.higherjess.com" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Pricing FR 🏷️</a>
-                <a href="https://academia.higherjess.com" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Academia 🎓</a>
-                <a href="https://magazine.higherjess.com" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Magazine 📰</a>
-                <a href="https://higherjess.store" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Shop 🛍️</a>
-                <a href="https://portfolio.higherjess.com" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Portfolio 💼</a>
-                <a href="pages/contact.html" class="block mt-4 text-center bg-brand-orange text-white px-3 py-2 rounded-md font-medium">Contact Us</a>
+        <!-- MOBILE INTERACTIVE DRAWER CONTAINER (Controlled via js/script.js) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white dark:bg-[#0C1527] border-b border-gray-200 dark:border-gray-800 shadow-xl z-[90]">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="index.html" class="px-3 py-2 rounded-md bg-orange-500/10 text-brand-orange font-semibold">Home</a>
+                <a href="pages/services.html" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium transition-colors">Services</a>
+                <a href="#services-preview" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium transition-colors">Prices</a>
+                <!-- Shop Link Integration -->
+                <a href="https://higherjess.store" target="_blank" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-brand-orange transition-colors">Shop 🛍️</a>
+                
+                <hr class="border-gray-100 dark:border-gray-800 my-2">
+                
+                <a href="pages/contact.html" class="w-full text-center bg-brand-orange hover:bg-orange-600 text-white font-medium px-4 py-2.5 rounded-lg transition-all block">Contact Us</a>
             </div>
         </div>
-<!-- Mobile Menu & Theme Icon Triggers -->
-<div class="flex items-center gap-2 md:hidden">
-    <button id="mobile-theme-toggle" type="button" aria-label="Toggle dark mode mobile" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none">
-        <i id="mobile-theme-toggle-icon" class="fa-solid fa-moon text-lg"></i>
-    </button>
-    <!-- Optimized Menu Button -->
-    <button id="menu-btn" type="button" aria-label="Toggle navigation menu" class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none relative z-50">
-        <i class="fa-solid fa-bars text-xl pointer-events-none"></i>
-    </button>
-</div>
     </nav>
 
-    <!-- HERO INTRODUCTION -->
-    <header class="pt-32 pb-16 md:pt-40 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            
-            <!-- Left Text Content Context -->
-            <div class="space-y-6 text-center md:text-left">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-navy dark:text-white leading-tight">
-                    Scale your business through the <span class="text-brand-orange">Digital</span> lens.
-                </h1>
-                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto md:mx-0">
-                    High-performing web development, scalable Shopify systems, and tailored digital experiences designed to elevate your ecosystem globally.
-                </p>
-                
-                <!-- Action CTA Interfaces -->
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
-                    <a href="https://prix.higherjess.com" target="_blank" class="bg-brand-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg text-center shadow-lg shadow-orange-500/10 transition-transform hover:-translate-y-0.5">
-                        Our Pricing
-                    </a>
-                    <a href="https://wa.me/#" target="_blank" class="inline-flex items-center justify-center gap-2 bg-transparent border border-gray-300 dark:border-gray-700 hover:border-brand-orange dark:hover:border-brand-orange text-brand-navy dark:text-white font-semibold px-6 py-3 rounded-lg text-center transition-colors">
-                        <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i> Chat on WhatsApp
-                    </a>
-                </div>
+    <!-- CORE CONTAINER SECTIONS GO BELOW HERE -->
 
-                <!-- Strategic Ecosystem Hub Shortcuts -->
-                <div class="pt-6 border-t border-gray-200/60 dark:border-gray-800/60 grid grid-cols-2 gap-4 max-w-md mx-auto md:mx-0 text-left text-xs text-gray-500 dark:text-gray-400">
-                    <a href="https://prix.higherjess.com" target="_blank" class="hover:text-brand-orange transition-colors flex items-center gap-2">
-                        <i class="fa-solid fa-tags text-brand-orange"></i> Pricing FR
-                    </a>
-                    <a href="https://academia.higherjess.com" target="_blank" class="hover:text-brand-orange transition-colors flex items-center gap-2">
-                        <i class="fa-solid fa-graduation-cap text-brand-orange"></i> Higherjess Academia
-                    </a>
-                    <a href="https://magazine.higherjess.com" target="_blank" class="hover:text-brand-orange transition-colors flex items-center gap-2">
-                        <i class="fa-solid fa-newspaper text-brand-orange"></i> Higherjess Magazine
-                    </a>
-                    <a href="https://higherjess.store" target="_blank" class="hover:text-brand-orange transition-colors flex items-center gap-2">
-                        <i class="fa-solid fa-cart-shopping text-brand-orange"></i> Higherjess Store
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Right Hero Image Showcase Layout -->
-            <div class="relative w-full max-w-md mx-auto md:max-w-none">
-                <div class="absolute inset-0 bg-gradient-to-tr from-brand-orange/20 to-transparent rounded-2xl blur-2xl -z-10"></div>
-                <img src="consulting.png" alt="Higherjess Business Modern Setup Workspace" class="w-full h-auto rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-800 object-cover">
-            </div>
-
-        </div>
-    </header>
-
-    <!-- ABOUT US SECTION -->
-    <section id="about" class="py-20 bg-white dark:bg-[#0B132B]/30 border-t border-gray-100 dark:border-gray-900 scroll-mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative order-2 md:order-1">
-                    <div class="absolute inset-0 bg-gradient-to-bl from-brand-orange/10 to-transparent rounded-2xl blur-xl -z-10"></div>
-                    <img src="main-feature.png" alt="Team collaborating on digital solutions" class="w-full h-auto rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 object-cover">
-                </div>
-                <div class="space-y-6 order-1 md:order-2">
-                    <h2 class="text-xs font-bold tracking-widest uppercase text-brand-orange">Who We Are</h2>
-                    <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-navy dark:text-white tracking-tight">
-                        Driving Growth Through Purposeful Innovation
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        At Higherjess Business, we unify technical engineering with tactical digital execution. We don't just write code or launch frameworks—we build sustainable digital ecosystems that enable modern brands and professional networks to expand their market footprint. 
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 pt-2">
-                        <div class="space-y-2">
-                            <span class="block text-2xl font-bold text-brand-orange">Build.</span>
-                            <p class="text-xs text-gray-500 dark:text-gray-400">Robust architectures engineered for seamless performance and accessibility.</p>
-                        </div>
-                        <div class="space-y-2">
-                            <span class="block text-2xl font-bold text-brand-orange">Learn.</span>
-                            <p class="text-xs text-gray-500 dark:text-gray-400">Fostering educational ecosystems through technical academies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PLATFORMS & SOCIAL CONNECTIONS SECTION -->
-    <section class="py-10 bg-white dark:bg-[#0B132B]/40 border-t border-gray-100 dark:border-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <h2 class="text-xs font-bold tracking-widest uppercase text-brand-orange">Connect with our Networks & Platforms</h2>
-            
-            <!-- Grid list of social platforms requested -->
-            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8 text-2xl">
-                
-                <!-- LinkedIn -->
-                <a href="https://linkedin.com/in/#" target="_blank" aria-label="LinkedIn Profile" class="text-gray-400 hover:text-[#0A66C2] transition-colors transition-transform hover:-translate-y-1">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a href="https://instagram.com/#" target="_blank" aria-label="Instagram Profile" class="text-gray-400 hover:text-[#E1306C] transition-colors transition-transform hover:-translate-y-1">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <!-- YouTube -->
-                <a href="https://youtube.com/#" target="_blank" aria-label="YouTube Channel" class="text-gray-400 hover:text-[#FF0000] transition-colors transition-transform hover:-translate-y-1">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-
-                <!-- WhatsApp -->
-                <a href="https://wa.me/#" target="_blank" aria-label="WhatsApp Contact" class="text-gray-400 hover:text-[#25D366] transition-colors transition-transform hover:-translate-y-1">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <!-- X (Twitter) -->
-                <a href="https://x.com/#" target="_blank" aria-label="X Profile" class="text-gray-400 hover:text-black dark:hover:text-white transition-colors transition-transform hover:-translate-y-1">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-                <!-- Shopify Vendor -->
-                <a href="https://higherjess.myshopify.com" target="_blank" aria-label="Shopify Administration Backoffice Link" class="text-gray-400 hover:text-[#96BF48] transition-colors transition-transform hover:-translate-y-1">
-                    <i class="fa-brands fa-shopify"></i>
-                </a>
-
-                <!-- Fiverr Custom Render Module -->
-                <a href="https://fiverr.com/#" target="_blank" aria-label="Fiverr Freelance Profile" class="text-gray-400 hover:text-[#1DBF73] transition-colors transition-transform hover:-translate-y-1 font-extrabold tracking-tighter text-xl border border-gray-300 dark:border-gray-700 rounded px-2 py-0.5 hover:border-[#1DBF73]">
-                    fiverr<span class="text-[#1DBF73]">.</span>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CORE IMPLEMENTATION CODE LINK -->
+    <!-- Core Script Binding -->
     <script src="js/script.js"></script>
 </body>
 </html>
