@@ -35,20 +35,21 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo & Brand identity -->
                 <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="logo.png" alt="Higherjess Business Logo" class="h-10 w-10 rounded-lg object-cover border border-gray-200 dark:border-gray-700 transition-transform group-hover:scale-105">
+                    <img src="images/logo.png" alt="Higherjess Business Logo" class="h-10 w-10 rounded-lg object-cover border border-gray-200 dark:border-gray-700 transition-transform group-hover:scale-105">
                     <div>
                         <span class="font-bold text-lg tracking-tight block text-brand-navy dark:text-white">Higherjess Business</span>
                         <span class="text-xs text-brand-orange font-medium tracking-wider uppercase block -mt-1">Build. Learn. Grow.</span>
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Links (Routing to subdomains & internal pages) -->
+                <!-- Desktop Navigation Links -->
                 <div class="hidden md:flex items-center gap-6">
                     <a href="index.html" class="text-brand-orange font-semibold transition-colors">Home</a>
-                    <a href="services.html" class="hover:text-brand-orange font-medium transition-colors">Services</a>
+                    <a href="#about" class="hover:text-brand-orange font-medium transition-colors">About</a>
+                    <a href="https://prix.higherjess.com" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Pricing FR <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
                     <a href="https://academia.higherjess.com" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Academia <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
                     <a href="https://magazine.higherjess.com" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Magazine <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
-                    <a href="https://sneaker-shop1-lime.vercel.app/ target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Shop <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
+                    <a href="https://higherjess.store" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Shop <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
                     <a href="https://portfolio.higherjess.com" target="_blank" class="hover:text-brand-orange font-medium transition-colors flex items-center gap-1">Portfolio <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i></a>
                 </div>
 
@@ -58,7 +59,7 @@
                         <i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun text-lg text-amber-500"></i>
                         <i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon text-lg"></i>
                     </button>
-                    <a href="contact.html" class="bg-brand-orange hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg transition-all shadow-sm shadow-orange-500/10 hover:shadow-orange-500/20">
+                    <a href="pages/contact.html" class="bg-brand-orange hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg transition-all shadow-sm shadow-orange-500/10 hover:shadow-orange-500/20">
                         Contact Us
                     </a>
                 </div>
@@ -79,7 +80,8 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#0C1527] border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
             <div class="px-4 pt-2 pb-4 space-y-1">
                 <a href="index.html" class="block px-3 py-2 rounded-md text-brand-orange font-semibold">Home</a>
-                <a href="services.html" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Services</a>
+                <a href="#about" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">About</a>
+                <a href="https://prix.higherjess.com" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Pricing FR 🏷️</a>
                 <a href="https://academia.higherjess.com" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Academia 🎓</a>
                 <a href="https://magazine.higherjess.com" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Magazine 📰</a>
                 <a href="https://higherjess.store" target="_blank" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium">Shop 🛍️</a>
@@ -89,99 +91,23 @@
         </div>
     </nav>
 
-    <!-- HERO INTRODUCTION HERO -->
-    <header class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- HERO INTRODUCTION -->
+    <header class="pt-32 pb-16 md:pt-40 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             
             <!-- Left Text Content Context -->
             <div class="space-y-6 text-center md:text-left">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-navy dark:text-white leading-tight">
-                    Scale your business through the <span class="gradient-text">Digital</span> lens.
+                    Scale your business through the <span class="text-brand-orange">Digital</span> lens.
                 </h1>
                 <p class="text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto md:mx-0">
                     High-performing web development, scalable Shopify systems, and tailored digital experiences designed to elevate your ecosystem globally.
                 </p>
- <!-- Right Hero Image Showcase Layout -->
-            <div class="relative w-full max-w-md mx-auto md:max-w-none">
-                <div class="absolute inset-0 bg-gradient-to-tr from-brand-orange/20 to-transparent rounded-2xl blur-2xl -z-10"></div>
-                <img src="main-feature.png" alt="Higherjess Business Modern Setup Workspace" class="w-full h-auto rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-800 object-cover">
-            </div>
-<!-- SERVICES PREVIEW SECTION -->
-    <section id="services-preview" class="py-20 bg-white dark:bg-[#0C1527] border-t border-gray-100 dark:border-gray-800/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-xs font-bold tracking-widest uppercase text-brand-orange">What We Do</h2>
-                <p class="text-3xl sm:text-4xl font-extrabold text-brand-navy dark:text-white tracking-tight">
-                    Our Core Digital Expertise
-                </p>
-                <p class="text-gray-600 dark:text-gray-400">
-                    We engineer high-performance solutions designed to boost your online visibility and optimize your digital workflow.
-                </p>
-            </div>
-
-            <!-- Services Grid -->
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <!-- Service 1: Web Development -->
-                <div class="p-8 rounded-2xl bg-gray-50 dark:bg-[#0A1120] border border-gray-100 dark:border-gray-800/60 hover:border-brand-orange dark:hover:border-brand-orange transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange mb-6 text-xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-3">Web Development</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                        Modern, responsive full-stack websites built using clean code structures to ensure blazing fast loading speeds and elite performance.
-                    </p>
-                    <a href="pages/services.html" class="text-xs font-semibold text-brand-orange inline-flex items-center gap-2 hover:gap-3 transition-all">
-                        Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 2: E-commerce & Shopify -->
-                <div class="p-8 rounded-2xl bg-gray-50 dark:bg-[#0A1120] border border-gray-100 dark:border-gray-800/60 hover:border-brand-orange dark:hover:border-brand-orange transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange mb-6 text-xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-3">Shopify Ecosystems</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                        Custom high-converting digital storefronts setup to translate visitor traffic into consistent sales and seamless brand experiences.
-                    </p>
-                    <a href="services.html" class="text-xs font-semibold text-brand-orange inline-flex items-center gap-2 hover:gap-3 transition-all">
-                        Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 3: Online Visibility -->
-                <div class="p-8 rounded-2xl bg-gray-50 dark:bg-[#0A1120] border border-gray-100 dark:border-gray-800/60 hover:border-brand-orange dark:hover:border-brand-orange transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange mb-6 text-xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-3">Digital Visibility</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                        Strategic maintenance, audits, and technical structuring to place your business domain where international clients can easily discover it.
-                    </p>
-                    <a href="services.html" class="text-xs font-semibold text-brand-orange inline-flex items-center gap-2 hover:gap-3 transition-all">
-                        Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- View All Call-To-Action -->
-            <div class="text-center mt-12">
-                <a href="services.html" class="inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors">
-                    Explore all comprehensive packages and technical terms <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-
-        </div>
-    </section>
                 
                 <!-- Action CTA Interfaces -->
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
-                    <a href="services.html" class="bg-brand-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg text-center shadow-lg shadow-orange-500/10 transition-transform hover:-translate-y-0.5">
-                        Our Services
+                    <a href="https://prix.higherjess.com" target="_blank" class="bg-brand-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg text-center shadow-lg shadow-orange-500/10 transition-transform hover:-translate-y-0.5">
+                        Our Pricing
                     </a>
                     <a href="https://wa.me/#" target="_blank" class="inline-flex items-center justify-center gap-2 bg-transparent border border-gray-300 dark:border-gray-700 hover:border-brand-orange dark:hover:border-brand-orange text-brand-navy dark:text-white font-semibold px-6 py-3 rounded-lg text-center transition-colors">
                         <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i> Chat on WhatsApp
@@ -190,6 +116,9 @@
 
                 <!-- Strategic Ecosystem Hub Shortcuts -->
                 <div class="pt-6 border-t border-gray-200/60 dark:border-gray-800/60 grid grid-cols-2 gap-4 max-w-md mx-auto md:mx-0 text-left text-xs text-gray-500 dark:text-gray-400">
+                    <a href="https://prix.higherjess.com" target="_blank" class="hover:text-brand-orange transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-tags text-brand-orange"></i> Pricing FR
+                    </a>
                     <a href="https://academia.higherjess.com" target="_blank" class="hover:text-brand-orange transition-colors flex items-center gap-2">
                         <i class="fa-solid fa-graduation-cap text-brand-orange"></i> Higherjess Academia
                     </a>
@@ -197,16 +126,50 @@
                         <i class="fa-solid fa-newspaper text-brand-orange"></i> Higherjess Magazine
                     </a>
                     <a href="https://higherjess.store" target="_blank" class="hover:text-brand-orange transition-colors flex items-center gap-2">
-                        <i class="fa-solid fa-cart-shopping sign text-brand-orange"></i> Higherjess Store
-                    </a>
-                    <a href="https://portfolio.higherjess.com" target="_blank" class="hover:text-brand-orange transition-colors flex items-center gap-2">
-                        <i class="fa-solid fa-briefcase text-brand-orange"></i> Project Portfolio
+                        <i class="fa-solid fa-cart-shopping text-brand-orange"></i> Higherjess Store
                     </a>
                 </div>
             </div>
-           
+            
+            <!-- Right Hero Image Showcase Layout -->
+            <div class="relative w-full max-w-md mx-auto md:max-w-none">
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand-orange/20 to-transparent rounded-2xl blur-2xl -z-10"></div>
+                <img src="images/hero.jpg" alt="Higherjess Business Modern Setup Workspace" class="w-full h-auto rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-800 object-cover">
+            </div>
+
         </div>
     </header>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-20 bg-white dark:bg-[#0B132B]/30 border-t border-gray-100 dark:border-gray-900 scroll-mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative order-2 md:order-1">
+                    <div class="absolute inset-0 bg-gradient-to-bl from-brand-orange/10 to-transparent rounded-2xl blur-xl -z-10"></div>
+                    <img src="images/about.jpg" alt="Team collaborating on digital solutions" class="w-full h-auto rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 object-cover">
+                </div>
+                <div class="space-y-6 order-1 md:order-2">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-brand-orange">Who We Are</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-navy dark:text-white tracking-tight">
+                        Driving Growth Through Purposeful Innovation
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        At Higherjess Business, we unify technical engineering with tactical digital execution. We don't just write code or launch frameworks—we build sustainable digital ecosystems that enable modern brands and professional networks to expand their market footprint. 
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-2">
+                        <div class="space-y-2">
+                            <span class="block text-2xl font-bold text-brand-orange">Build.</span>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Robust architectures engineered for seamless performance and accessibility.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="block text-2xl font-bold text-brand-orange">Learn.</span>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Fostering educational ecosystems through technical academies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- PLATFORMS & SOCIAL CONNECTIONS SECTION -->
     <section class="py-10 bg-white dark:bg-[#0B132B]/40 border-t border-gray-100 dark:border-gray-900">
