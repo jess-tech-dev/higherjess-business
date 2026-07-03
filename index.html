@@ -31,11 +31,10 @@
     <!-- HEADER / NAVIGATION -->
     <header class="bg-brand-navy text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo Placeholder Container -->
+            <!-- Brand Logo Integration Container -->
             <a href="#" class="flex items-center space-x-3 text-xl font-bold tracking-tight group">
-                <div class="bg-brand-orange text-white w-10 h-10 flex items-center justify-center rounded-lg shadow-md font-black text-2xl tracking-tighter">
-                    H
-                </div>
+                <!-- IMAGE ASSET: Replace src with your local path -->
+                <img src="https://via.placeholder.com/40" alt="Higherjess Business Logo" class="w-10 h-10 object-contain rounded-lg shadow-md bg-white p-1">
                 <div class="flex flex-col leading-none">
                     <span class="text-brand-orange text-lg font-black">Higherjess</span>
                     <span class="text-white text-xs tracking-widest uppercase font-semibold">Business</span>
@@ -43,9 +42,10 @@
             </a>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8 font-medium">
+            <nav class="hidden lg:flex items-center space-x-6 font-medium">
                 <a href="#" class="text-brand-orange hover:text-white transition duration-200">Home</a>
                 <a href="https://store.higherjess.com" target="_blank" class="hover:text-brand-orange transition duration-200">Store</a>
+                <a href="https://shopify.com" target="_blank" class="hover:text-brand-orange transition duration-200 flex items-center space-x-1"><i class="fa-brands fa-shopify text-emerald-400"></i> <span>Shopify</span></a>
                 <a href="https://academia.higherjess.com" target="_blank" class="hover:text-brand-orange transition duration-200">Academia</a>
                 <a href="#pricing" class="hover:text-brand-orange transition duration-200">Pricing</a>
                 <a href="https://magazine.higherjess.com" target="_blank" class="hover:text-brand-orange transition duration-200">Magazine</a>
@@ -53,14 +53,14 @@
             </nav>
 
             <!-- CTA Button (Desktop) -->
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
                 <a href="#contact" class="bg-brand-orange text-white px-6 py-2.5 rounded-md font-semibold hover:bg-opacity-90 transition duration-200 shadow-sm">
                     Get in Touch
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none focus:ring-2 focus:ring-brand-orange rounded" aria-label="Open menu">
+            <button id="menu-btn" class="lg:hidden text-white p-2 focus:outline-none focus:ring-2 focus:ring-brand-orange rounded" aria-label="Open menu">
                 <i class="fa-solid fa-bars text-2xl pointer-events-none"></i>
             </button>
         </div>
@@ -76,7 +76,10 @@
             <div>
                 <!-- Drawer Top Header -->
                 <div class="flex items-center justify-between pb-6 border-b border-brand-blue">
-                    <span class="text-lg font-bold text-brand-orange">Menu</span>
+                    <div class="flex items-center space-x-2">
+                        <img src="https://via.placeholder.com/32" alt="Logo" class="w-8 h-8 rounded bg-white p-0.5">
+                        <span class="text-lg font-bold text-brand-orange">Menu</span>
+                    </div>
                     <button id="close-menu-btn" class="text-white p-2 focus:outline-none focus:ring-2 focus:ring-brand-orange rounded" aria-label="Close menu">
                         <i class="fa-solid fa-xmark text-2xl pointer-events-none"></i>
                     </button>
@@ -87,6 +90,9 @@
                     <a href="#" class="text-brand-orange hover:pl-2 transition-all duration-200">Home</a>
                     <a href="https://store.higherjess.com" target="_blank" class="hover:text-brand-orange hover:pl-2 transition-all duration-200 flex items-center space-x-2">
                         <i class="fa-solid fa-shopping-bag text-sm"></i> <span>Store</span>
+                    </a>
+                    <a href="https://shopify.com" target="_blank" class="hover:text-brand-orange hover:pl-2 transition-all duration-200 flex items-center space-x-2">
+                        <i class="fa-brands fa-shopify text-emerald-400"></i> <span>Shopify Integration</span>
                     </a>
                     <a href="https://academia.higherjess.com" target="_blank" class="hover:text-brand-orange hover:pl-2 transition-all duration-200 flex items-center space-x-2">
                         <i class="fa-solid fa-graduation-cap text-sm"></i> <span>Academia</span>
@@ -113,24 +119,35 @@
     </div>
 
     <!-- HERO SECTION -->
-    <main class="flex-grow bg-gradient-to-b from-brand-navy to-brand-blue text-white flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-            <span class="inline-block bg-brand-orange bg-opacity-20 text-brand-orange font-semibold px-4 py-1.5 rounded-full text-sm tracking-wide uppercase">
-                Custom Digital Solutions
-            </span>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-                Scale Your Online <br class="hidden sm:inline"> Visibility With Expertise
-            </h1>
-            <p class="text-base sm:text-lg text-brand-gray max-w-2xl mx-auto leading-relaxed">
-                From modern full-stack web applications to seamless ecosystem architectures, we build production-ready digital solutions engineered for growth.
-            </p>
-            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://portfolio.higherjess.com" target="_blank" class="w-full sm:w-auto bg-brand-orange text-white px-8 py-3.5 rounded-md font-bold text-center shadow-lg hover:bg-opacity-90 transition duration-200">
-                    Explore Portfolio
-                </a>
-                <a href="#pricing" class="w-full sm:w-auto border-2 border-white border-opacity-20 hover:border-brand-orange text-white px-8 py-3.5 rounded-md font-bold text-center transition duration-200">
-                    View Pricing
-                </a>
+    <main class="bg-gradient-to-b from-brand-navy to-brand-blue text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 flex items-center">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Text Block -->
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="inline-block bg-brand-orange bg-opacity-20 text-brand-orange font-semibold px-4 py-1.5 rounded-full text-sm tracking-wide uppercase">
+                    Custom Digital Solutions
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                    Scale Your Online <br class="hidden sm:inline"> Visibility With Expertise
+                </h1>
+                <p class="text-base sm:text-lg text-brand-gray max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    From modern full-stack web applications to seamless ecosystem architectures, we build production-ready digital solutions engineered for growth.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="https://portfolio.higherjess.com" target="_blank" class="w-full sm:w-auto bg-brand-orange text-white px-8 py-3.5 rounded-md font-bold text-center shadow-lg hover:bg-opacity-90 transition duration-200">
+                        Explore Portfolio
+                    </a>
+                    <a href="#pricing" class="w-full sm:w-auto border-2 border-white border-opacity-20 hover:border-brand-orange text-white px-8 py-3.5 rounded-md font-bold text-center transition duration-200">
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Visual Image Mockup Block -->
+            <div class="flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-lg">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-orange to-brand-blue rounded-xl blur opacity-20 transition duration-1000"></div>
+                    <img src="https://via.placeholder.com/600x400" alt="Higherjess Business App Interface Display" class="relative rounded-xl shadow-2xl border border-white border-opacity-10 object-cover w-full h-auto">
+                </div>
             </div>
         </div>
     </main>
@@ -195,9 +212,12 @@
     <footer class="bg-brand-navy text-brand-gray border-t border-brand-blue py-12 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-brand-blue pb-8">
-                <!-- Branding Context -->
-                <div class="text-center md:text-left">
-                    <span class="text-white font-bold text-lg"><span class="text-brand-orange">Higherjess</span> Business</span>
+                <!-- Branding Context With Logo Asset -->
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="flex items-center space-x-2">
+                        <img src="https://via.placeholder.com/32" alt="Footer Logo" class="w-8 h-8 rounded bg-white p-0.5">
+                        <span class="text-white font-bold text-lg"><span class="text-brand-orange">Higherjess</span> Business</span>
+                    </div>
                     <p class="text-xs text-brand-gray mt-1">Deploying production-grade solutions globally.</p>
                 </div>
                 
@@ -209,15 +229,19 @@
                     </a>
                 </div>
 
-                <!-- Structured Social Media Profiles Block -->
-                <div class="flex justify-center md:justify-end space-x-5">
-                    <a href="https://github.com" target="_blank" class="w-10 h-10 bg-brand-blue hover:bg-brand-orange text-white flex items-center justify-center rounded-md transition duration-200 shadow-sm" aria-label="GitHub Developer Profile">
+                <!-- Structured Social Media Profiles Block (Includes Fiverr) -->
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="https://github.com" target="_blank" class="w-10 h-10 bg-brand-blue hover:bg-brand-orange text-white flex items-center justify-center rounded-md transition duration-200 shadow-sm" aria-label="GitHub Profile">
                         <i class="fa-brands fa-github text-lg"></i>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" class="w-10 h-10 bg-brand-blue hover:bg-brand-orange text-white flex items-center justify-center rounded-md transition duration-200 shadow-sm" aria-label="LinkedIn Professional Network">
+                    <a href="https://linkedin.com" target="_blank" class="w-10 h-10 bg-brand-blue hover:bg-brand-orange text-white flex items-center justify-center rounded-md transition duration-200 shadow-sm" aria-label="LinkedIn Network">
                         <i class="fa-brands fa-linkedin-in text-lg"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" class="w-10 h-10 bg-brand-blue hover:bg-brand-orange text-white flex items-center justify-center rounded-md transition duration-200 shadow-sm" aria-label="X Ecosystem Connection">
+                    <!-- Fiverr Marketplace Direct External Anchor Profile -->
+                    <a href="https://fiverr.com" target="_blank" class="w-10 h-10 bg-brand-blue hover:bg-brand-orange text-white flex items-center justify-center rounded-md transition duration-200 shadow-sm font-black text-sm tracking-tighter text-emerald-400" aria-label="Fiverr Freelance Storefront">
+                        FI
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="w-10 h-10 bg-brand-blue hover:bg-brand-orange text-white flex items-center justify-center rounded-md transition duration-200 shadow-sm" aria-label="X Connection">
                         <i class="fa-brands fa-x-twitter text-lg"></i>
                     </a>
                 </div>
@@ -236,10 +260,6 @@
 
     <!-- INTERACTION SCRIPTS -->
     <script>
-        /**
-         * Higherjess Business - Embedded Application Script (app.js context)
-         * Handles responsive interactive components.
-         */
         document.addEventListener('DOMContentLoaded', () => {
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -262,7 +282,6 @@
             if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMobileMenu);
             if (menuOverlay) menuOverlay.addEventListener('click', closeMobileMenu);
 
-            // Automatically close when a navigation link within the drawer is selected
             const mobileLinks = mobileMenu?.querySelectorAll('nav a');
             mobileLinks?.forEach(link => {
                 link.addEventListener('click', closeMobileMenu);
