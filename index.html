@@ -1,97 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higherjess Business | Digital Solutions</title>
-    <!-- Tailwind CSS Play CDN -->
+    <title>Higherjess Business | Solutions Digitales & Visibilité en Ligne</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Custom Style Sheet Sheet Link -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- TAILWIND ENGINE CRITICAL DIRECTION -->
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         brand: {
+                            navy: '#0A192F',
+                            blue: '#172A45',
                             orange: '#FF6B00',
-                            navy: '#0A192F'
+                            light: '#F4F6F9',
+                            gray: '#64748B'
                         }
                     }
                 }
             }
         }
     </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-[#0A1120] dark:text-gray-100 min-h-screen">
+<body class="bg-brand-light text-brand-navy font-sans antialiased min-h-screen flex flex-col">
 
-    <!-- GLOBAL NAVBAR -->
-    <nav class="sticky top-0 bg-white/80 dark:bg-[#0C1527]/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800/80 w-full z-[100]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                
-                <!-- Brand Logo Identity -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="text-xl font-black uppercase tracking-tight text-brand-navy dark:text-white">
-                        Higherjess<span class="text-brand-orange">.</span>
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-brand-navy text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-2 text-xl font-bold tracking-tight">
+                <span class="text-brand-orange">Higherjess</span>
+                <span>Business</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="#" class="text-brand-orange hover:text-white transition duration-200">Accueil</a>
+                <a href="https://store.higherjess.com" target="_blank" class="hover:text-brand-orange transition duration-200">Store</a>
+                <a href="https://academia.higherjess.com" target="_blank" class="hover:text-brand-orange transition duration-200">Academia</a>
+                <a href="https://magazine.higherjess.com" target="_blank" class="hover:text-brand-orange transition duration-200">Magazine</a>
+                <a href="https://portfolio.higherjess.com" target="_blank" class="hover:text-brand-orange transition duration-200">Portfolio</a>
+            </nav>
+
+            <!-- CTA Button (Desktop) -->
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-brand-orange text-white px-6 py-2.5 rounded-md font-semibold hover:bg-opacity-90 transition duration-200 shadow-sm">
+                    Nous Contacter
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none focus:ring-2 focus:ring-brand-orange rounded" aria-label="Ouvrir le menu">
+                <i class="fa-solid fa-bars text-2xl pointer-events-none"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+        <!-- Background Overlay Backdrop -->
+        <div id="menu-overlay" class="fixed inset-0 bg-brand-navy bg-opacity-60 backdrop-blur-sm"></div>
+        
+        <!-- Drawer Panel -->
+        <nav class="fixed top-0 right-0 bottom-0 w-4/5 max-w-sm bg-brand-navy text-white p-6 shadow-2xl flex flex-col justify-between transform transition-transform duration-300 ease-in-out">
+            <div>
+                <!-- Drawer Top Header -->
+                <div class="flex items-center justify-between pb-6 border-b border-brand-blue">
+                    <span class="text-lg font-bold text-brand-orange">Menu</span>
+                    <button id="close-menu-btn" class="text-white p-2 focus:outline-none focus:ring-2 focus:ring-brand-orange rounded" aria-label="Fermer le menu">
+                        <i class="fa-solid fa-xmark text-2xl pointer-events-none"></i>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="mt-8 flex flex-col space-y-5 text-lg font-medium">
+                    <a href="#" class="text-brand-orange hover:pl-2 transition-all duration-200">Accueil</a>
+                    <a href="https://store.higherjess.com" target="_blank" class="hover:text-brand-orange hover:pl-2 transition-all duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-shopping-bag text-sm"></i> <span>Store</span>
+                    </a>
+                    <a href="https://academia.higherjess.com" target="_blank" class="hover:text-brand-orange hover:pl-2 transition-all duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-graduation-cap text-sm"></i> <span>Academia</span>
+                    </a>
+                    <a href="https://magazine.higherjess.com" target="_blank" class="hover:text-brand-orange hover:pl-2 transition-all duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-newspaper text-sm"></i> <span>Magazine</span>
+                    </a>
+                    <a href="https://portfolio.higherjess.com" target="_blank" class="hover:text-brand-orange hover:pl-2 transition-all duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-briefcase text-sm"></i> <span>Portfolio</span>
                     </a>
                 </div>
+            </div>
 
-                <!-- Desktop Navigation Links -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-brand-orange font-semibold">Home</a>
-                    <a href="pages/services.html" class="hover:text-brand-orange font-medium transition-colors">Services</a>
-                    <!-- Price/Anchor links point directly to specific ID sections on home page layout -->
-                    <a href="#services-preview" class="hover:text-brand-orange font-medium transition-colors">Prices</a>
-                    
-                    <!-- Desktop Theme Mode Engine Switch Trigger -->
-                    <button id="theme-toggle" type="button" aria-label="Toggle dark mode desktop" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none">
-                        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-lg"></i>
-                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-lg text-amber-500 hidden"></i>
-                    </button>
+            <!-- Drawer Bottom CTA -->
+            <div class="mt-auto pt-6 border-t border-brand-blue">
+                <a href="#contact" class="block w-full text-center bg-brand-orange text-white py-3 rounded-md font-semibold hover:bg-opacity-90 transition duration-200">
+                    Nous Contacter
+                </a>
+            </div>
+        </nav>
+    </div>
 
-                    <a href="pages/contact.html" class="bg-brand-orange hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg transition-all shadow-sm">Contact Us</a>
-                </div>
-
-                <!-- Mobile Header Interactive Action Controls -->
-                <div class="flex items-center gap-2 md:hidden">
-                    <!-- Mobile Theme Engine Switch Trigger -->
-                    <button id="mobile-theme-toggle" type="button" aria-label="Toggle dark mode mobile" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none">
-                        <i id="mobile-theme-toggle-icon" class="fa-solid fa-moon text-lg"></i>
-                    </button>
-                    <!-- Core Hamburger Drawer Layout Button Trigger -->
-                    <button id="menu-btn" type="button" aria-label="Toggle navigation menu" class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors focus:outline-none relative z-[110]">
-                        <i class="fa-solid fa-bars text-xl pointer-events-none"></i>
-                    </button>
-                </div>
-
+    <!-- HERO SECTION -->
+    <main class="flex-grow flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-brand-navy to-brand-blue text-white">
+        <div class="max-w-4xl text-center space-y-6">
+            <span class="inline-block bg-brand-orange bg-opacity-20 text-brand-orange font-semibold px-4 py-1.5 rounded-full text-sm tracking-wide uppercase">
+                Solutions Digitales Sur Mesure
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                Propulsez Votre Visibilité <br class="hidden sm:inline"> En Ligne Avec Expertise
+            </h1>
+            <p class="text-base sm:text-lg text-brand-gray max-w-2xl mx-auto leading-relaxed">
+                De la conception d'applications web modernes à la gestion de vos plateformes métiers, nous transformons vos ambitions en produits digitaux performants.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://portfolio.higherjess.com" target="_blank" class="w-full sm:w-auto bg-brand-orange text-white px-8 py-3.5 rounded-md font-bold text-center shadow-lg hover:bg-opacity-90 transition duration-200">
+                    Découvrir nos projets
+                </a>
+                <a href="#services" class="w-full sm:w-auto border-2 border-white border-opacity-20 hover:border-brand-orange text-white px-8 py-3.5 rounded-md font-bold text-center transition duration-200">
+                    Nos Services
+                </a>
             </div>
         </div>
+    </main>
 
-        <!-- MOBILE INTERACTIVE DRAWER CONTAINER (Controlled via js/script.js) -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white dark:bg-[#0C1527] border-b border-gray-200 dark:border-gray-800 shadow-xl z-[90]">
-            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
-                <a href="index.html" class="px-3 py-2 rounded-md bg-orange-500/10 text-brand-orange font-semibold">Home</a>
-                <a href="pages/services.html" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium transition-colors">Services</a>
-                <a href="#services-preview" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium transition-colors">Prices</a>
-                <!-- Shop Link Integration -->
-                <a href="https://higherjess.store" target="_blank" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-brand-orange transition-colors">Shop 🛍️</a>
-                
-                <hr class="border-gray-100 dark:border-gray-800 my-2">
-                
-                <a href="pages/contact.html" class="w-full text-center bg-brand-orange hover:bg-orange-600 text-white font-medium px-4 py-2.5 rounded-lg transition-all block">Contact Us</a>
+    <!-- FOOTER -->
+    <footer class="bg-brand-navy text-brand-gray border-t border-brand-blue py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+            <p>&copy; 2026 Higherjess Business. Tous droits réservés.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition duration-200">Mentions Légales</a>
+                <a href="#" class="hover:text-white transition duration-200">Confidentialité</a>
             </div>
         </div>
-    </nav>
+    </footer>
 
-    <!-- CORE CONTAINER SECTIONS GO BELOW HERE -->
+    <!-- INTERACTION SCRIPTS -->
+    <script>
+        /**
+         * Higherjess Business - Embedded Application Script (app.js context)
+         * Handles responsive interactive components.
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const menuOverlay = document.getElementById('menu-overlay');
 
-    <!-- Core Script Binding -->
-    <script src="js/script.js"></script>
+            const openMobileMenu = () => {
+                if (!mobileMenu) return;
+                mobileMenu.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            };
+
+            const closeMobileMenu = () => {
+                if (!mobileMenu) return;
+                mobileMenu.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            };
+
+            if (menuBtn) menuBtn.addEventListener('click', openMobileMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMobileMenu);
+            if (menuOverlay) menuOverlay.addEventListener('click', closeMobileMenu);
+
+            // Automatically close when a navigation link within the drawer is selected
+            const mobileLinks = mobileMenu?.querySelectorAll('nav a');
+            mobileLinks?.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        });
+    </script>
 </body>
 </html>
