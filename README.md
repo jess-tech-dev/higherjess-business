@@ -1,25 +1,39 @@
-# Higherjess Business 🌐
+# Higherjess Business Landing Page
 
-Higherjess Business is a digital solutions company focused on helping businesses grow through modern technology.
+Welcome to the primary corporate landing page for **Higherjess Business**, a high-performance digital solutions agency specializing in bespoke full-stack web development, online visibility architecture, and digital roadmaps. 
 
-## 🚀 About the Project
+This platform acts as the central hub for the broader Higherjess digital ecosystem.
 
-This is the official website of Higherjess Business.  
-It showcases our services, mission, and contact information.
+---
 
-## 💼 Services
+## 🚀 Ecosystem Architecture
 
-- Web Development
-- E-Commerce Solutions
-- Community Management
-- Graphic Design
-- POS Systems
-- Digital Training
+This repository forms the core landing framework that unifies and drives traffic to our specialized subdomains and external channels:
 
-## 🧱 Tech Stack
+*   **Main Hub:** `higherjess.com`
+*   **Commerce & Tools:** `store.higherjess.com` & Integrated Shopify systems.
+*   **Educational Platform:** `academia.higherjess.com` (Repository: `h-academia`)
+*   **Content & Media:** `magazine.higherjess.com`
+*   **Portfolios & Case Studies:** `portfolio.higherjess.com`
+*   **Freelance Hubs:** Fiverr Marketplace profile integrations.
 
-- HTML5
-- CSS3
-- JavaScript
+---
 
-## 📁 Project Structure
+## 🛠️ Tech Stack & Architecture
+
+This landing page is engineered for maximum speed, responsiveness, and zero-overhead deployments using a lean, client-focused framework:
+
+*   **Markup:** HTML5 with semantic layout structuring.
+*   **Styling:** Tailwind CSS (via optimized CDN configuration utilizing a custom integrated brand color palette).
+*   **Icons:** FontAwesome v6 injection.
+*   **Interactions:** Vanilla JavaScript (`js/app.js`) structured with modular, event-driven patterns.
+
+### Brand Color Configurations
+```javascript
+brand: {
+    navy: '#0A192F',    // Deep background base
+    blue: '#172A45',    // Secondary section block background
+    orange: '#FF6B00',  // High-conversion primary accent/CTA
+    light: '#F4F6F9',   // High-contrast canvas light background
+    gray: '#64748B'     // Accessible, scannable typography tone
+}
